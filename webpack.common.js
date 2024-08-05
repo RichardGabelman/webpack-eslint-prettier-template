@@ -28,6 +28,19 @@ module.exports = {
         test: /\.xml$/i,
         use: ["xml-loader"],
       },
+      // npm install -D babel-loader @babel/core @babel/preset-env webpack
+      {
+      test: /\.(?:js|mjs|cjs)$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            ['@babel/preset-env', { targets: "defaults" }]
+          ]
+        }
+      }
+    }
       */
     ],
   },
