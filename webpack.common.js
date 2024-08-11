@@ -15,6 +15,11 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
       },
+      // Image files referenced in HTML template
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: "asset/resource",
